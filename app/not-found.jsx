@@ -29,7 +29,7 @@ export default function NotFound() {
       />
 
       <Link
-        href="/page/home"
+        href="/"
         className={styles.notFoundBtn}
         onClick={handleLinkClick}
       >

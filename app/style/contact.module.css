@@ -1,13 +1,105 @@
 @media screen {
+  .contactContainer {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .contactWrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 2px solid var(--tertiary-color);
+    border-bottom: 2px solid var(--tertiary-color);
+  }
 
-    
+  .contactContent {
+    gap: 10px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    color: var(--background-color);
+    border-top: 2px solid var(--tertiary-color);
+  }
+
+  .contactContent h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .contactContent p {
+    font-size: 1rem;
+  }
+
+  .contactContent:first-child {
+    border-top: none;
+  }
+
+  .socialLinks {
+    gap: 20px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .navLinks {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactLink {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactLink span {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+  }
+
+  .links {
+    color: var(--tertiary-color);
+  }
+
+  .links:hover {
+    color: var(--secondary-color);
+  }
+
+  .activeLink {
+    color: var(--secondary-color);
+  }
+
+  .footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer h4 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--background-color);
+  }
 }
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
-   
-    
+  .contactWrapper {
+    flex-direction: row;
+  }
+  .contactContent {
+    border-top: none;
+    padding: 100px 40px;
+    border-left: 2px solid var(--tertiary-color);
+
+  }
+
+  .contactContent:first-child {
+    border-left: none;
+  }
 }
 
 /* ipad pro screens & laptop */

@@ -1,13 +1,119 @@
 @media screen {
+  .serviceMain {
+    gap: 10px;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    padding-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--tertiary-color);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+  }
 
+  .serviceMain h2 {
+    z-index: 100;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
 
-    
+  .serviceMain h1 {
+    z-index: 100;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--primary-color);
+  }
+
+  .serviceContainer {
+    gap: 40px;
+    z-index: 100;
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .serviceCard {
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+   .oddCard {
+    display: flex;
+    flex-direction: column;
+}
+
+  .video {
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .serviceInfo {
+    gap: 20px;
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .serviceInfo h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: start;
+    text-transform: capitalize;
+  }
+
+  .serviceInfo p {
+    font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .serviceButton {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    cursor: pointer;
+    min-width: 200px;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+  }
+
+  .serviceButton:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+  }
 }
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
-   
-    
+  .serviceCard {
+    flex-direction: row;
+  }
+
+  .oddCard {
+    flex-direction: row-reverse;
+  }
+
+  .serviceButton {
+    width: fit-content;
+  }
+
 }
 
 /* ipad pro screens & laptop */

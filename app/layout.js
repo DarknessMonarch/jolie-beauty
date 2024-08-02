@@ -14,16 +14,18 @@ export const metadata = {
   metadataBase: new URL('https://jolie-beauty.com/'),
   title: 'jolie-beauty',
   applicationName: 'jolie-beauty',
-  author: 'jolie-beauty',
-  description: 'A salon of your choice',
+  author: 'Torcah',
+  images: "https://raw.githubusercontent.com/DarknessMonarch/jolie-beauty/master/public/assets/banner.png",
+  description: 'We offer beauty services, hair services and nails services',
   keywords: ['hair', 'beauty', 'salon', 'jolie-beauty', 'hair product', 'beauty product', 'salon product'],
 
   openGraph: {
     title: 'jolie-beauty',
-    description: 'A salon of your choice',
+    description: 'We offer beauty services, hair services and nails services',
     url: 'https://jolie-beauty.com/',
     siteName: 'jolie-beauty',
-    // images: '/assets/banner.png',
+    images: "https://raw.githubusercontent.com/DarknessMonarch/jolie-beauty/master/public/assets/banner.png",
+
   },
 
   robots: {
@@ -40,25 +42,7 @@ export const metadata = {
     },
   },
 
-  icons: {
-    icon: [
-      { url: 'favicon-16x16.png' },
-      new URL('favicon-16x16.png', 'https://jolie-beauty.com'),
-    ],
-    shortcut: ['/public/favicon-32x32.png'],
-    apple: [
-      { url: '/apple-touch-icon.png' },
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    other: [
-      {
-        rel: 'apple-touch-icon-precomposed',
-        url: '/apple-touch-icon.png',
-      },
-    ],
-  },
-};
+ };
 
 export default function RootLayout({ children }) {
   return (

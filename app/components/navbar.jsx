@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/public/icons/logo.svg";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "@/app/style/navbar.module.css";
@@ -22,21 +24,29 @@ export default function Navbar() {
     <>
       <div className={styles.navbarMain}>
         <div className={styles.navLogo}>
-          <h1>Jolie</h1>
+          <Image
+            src={Logo}
+            alt="logo"
+            width={50}
+            height={50}
+            className={styles.logo}
+          />
         </div>
         <MenuIcon
           className={styles.menuIcon}
           alt="back icon"
           onClick={toggleSideBar}
-          width={30}
-          height={30}
+          width={50}
+          height={50}
         />
         <div className={styles.navLinks}>
           {/* Home Link */}
           <Link
-            href="/page/home"
+            href="/"
             className={`${styles.links} ${
-              pathname === "/page/home" ? styles.activeLink : ""
+              pathname === "/" || pathname === "/page/home"
+                ? styles.activeLink
+                : ""
             }`}
           >
             Home
@@ -81,14 +91,16 @@ export default function Navbar() {
         <button className={styles.navBtn}>Book now</button>
       </div>
       {/* mobile link  */}
-      <div
-        className={`${styles.mobileLink} ${
-          isOpen ? styles.slideIn : ""
-        }`}
-      >
+      <div className={`${styles.mobileLink} ${isOpen ? styles.slideIn : ""}`}>
         <div className={styles.mobileTop}>
           <div className={styles.mobileLogo}>
-            <h1>logo</h1>
+          <Image
+            src={Logo}
+            alt="logo"
+            width={50}
+            height={50}
+            className={styles.logo}
+          />
           </div>
           <div className={styles.navClose}>
             <CloseIcon

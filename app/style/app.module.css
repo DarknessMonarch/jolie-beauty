@@ -1,4 +1,16 @@
 @media screen {
+    .mainApp {
+        top: 0;
+        left: 0;
+        right: 0;
+        gap: 10px;
+        bottom: 0;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
 
 
     
@@ -6,8 +18,9 @@
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
-   
-    
+    .notFound {
+        flex-direction: row;
+    }
 }
 
 /* ipad pro screens & laptop */

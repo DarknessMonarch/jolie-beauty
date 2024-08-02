@@ -1,12 +1,91 @@
 @media screen {
+  .homeMain {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bgImage {
+    z-index: -1;
+  }
+
+  .homeContents {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--tertiary-color);
+    justify-content: space-between;
+  }
+
+  .leftIcon,
+  .rightIcon {
+    cursor: pointer;
+    color: var(--background-color);
+  }
+
+  .leftIcon:hover,
+  .rightIcon:hover {
+    cursor: pointer;
+    color: var(--tertiary-color);
+  }
 
 
-    
+  .homeHero {
+    gap:30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .homeHero h1 {
+    font-weight: 500;
+    font-size: 1.7rem;
+    text-align: center;
+    color: var(--background-color);
+  }
+
+  .homeHero h1 span {
+    color: var(--secondary-color);
+  }
+
+  .homePlayBtn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 360%;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--background-color);
+  }
+
+  .homePlayBtn:hover {
+    border: 4px solid var(--tertiary-color);
+  }
+
+  .homePlayBtn:hover .playIcon {
+    color: var(--tertiary-color);
+  }
+
+  .playIcon{
+    color: var(--background-color);
+  }
 }
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
-   
+    .homeHero h1 {
+        font-size: 2.4rem;
+      }
+
+      .homePlayBtn {
+        width: 60px;
+        height: 60px;
+      }
     
 }
 

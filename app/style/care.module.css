@@ -1,0 +1,72 @@
+@media screen {
+  .careMain {
+    gap: 30px;
+    display: flex;
+    padding: 40px;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .careContainer {
+    gap: 10px;
+    display: flex;
+    padding: 10px;
+    z-index: 100;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .careIcon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .careContainer h1 {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--background-color);
+  }
+
+  .careContainer p {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+  }
+}
+
+/* using it as global style for larger devices  */
+@media only screen and (min-width: 48em) {
+  .careMain {
+    height: 70%;
+    padding: 50px;
+    flex-direction: row;
+  }
+
+  .careContainer {
+    padding: 30px;
+  }
+
+  .careContainer h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ipad pro screens & laptop */
+@media only screen and (min-width: 49em) and (max-width: 64em) {
+}
+
+/* large screens : Desktop and 4k screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+
+/* 5k screens and above */
+@media only screen and (min-width: 91em) {
+}
