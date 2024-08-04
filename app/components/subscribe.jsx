@@ -40,6 +40,8 @@ export default function Subscribe() {
     } catch (error) {
       if (error.response === 500) {
         toast.error(error.message);
+      } else {
+        toast.error(error);
       }
       
     } finally {

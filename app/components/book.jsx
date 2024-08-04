@@ -47,7 +47,7 @@ export default function Login() {
         email: "",
       });
     } catch (error) {
-      toast.error(error.message || "An unexpected error occurred");
+      toast.error(error);
     } finally {
       setIsLoading(false);
     }
