@@ -22,7 +22,7 @@ export default function Subscribe() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${SERVER_API}/subscribe`, {
+      const response = await fetch(`${SERVER_API}/subcription/subscribe`, {
         method: "POST",
         body: JSON.stringify({
           email: formData.email,
@@ -31,17 +31,17 @@ export default function Subscribe() {
           "Content-Type": "application/json",
         },
       });
-      const data = await response.json();
       toast.success(
-        `your ${email} has successfully subscribed to our newsletter `
+        `you  have successfully subscribed to our newsletter `
       );
       setFormData({
         email: "",
       });
     } catch (error) {
-      if (error.response === 400) {
+      if (error.response === 500) {
         toast.error(error.message);
       }
+      
     } finally {
       setIsLoading(false);
     }

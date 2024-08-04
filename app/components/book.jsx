@@ -11,22 +11,22 @@ import "react-phone-number-input/style.css";
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    phoneNumber: "",
+    phonenumber: "",
     date: "",
     email: "",
   });
 
-  const SERVER_API = process.env.SERVER_API;
+  const SERVER_API = process.env.NEXT_PUBLIC_SERVER_API; 
 
   async function onSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${SERVER_API}/${role}/login`, {
+      const response = await fetch(`${SERVER_API}/appointment/create`, {
         method: "POST",
         body: JSON.stringify({
-          phoneNumber: formData.phoneNumber,
+          phonenumber: formData.phonenumber,
           date: formData.date,
           email: formData.email,
         }),
@@ -34,22 +34,20 @@ export default function Login() {
           "Content-Type": "application/json",
         },
       });
-      const data = await response.json();
-      toast.success(`Appointed book ${email}`);
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "An error occurred");
+      }
+
+      toast.success(`Appointment booked for ${formData.email}`);
       setFormData({
-        phoneNumber: "",
+        phonenumber: "",
         date: "",
         email: "",
       });
     } catch (error) {
-      if (error.response === 400) {
-        toast.error(error.message);
-      } else if (error.response === 404) {
-        toast.error("User not found");
-      } else {
-        toast.error("Invalid credentials");
-      }
-      console.log(error);
+      toast.error(error.message || "An unexpected error occurred");
     } finally {
       setIsLoading(false);
     }
@@ -60,7 +58,7 @@ export default function Login() {
   };
 
   const handlePhoneChange = (value) => {
-    setFormData({ ...formData, phoneNumber: value });
+    setFormData({ ...formData, phonenumber: value });
   };
 
   return (
@@ -69,10 +67,10 @@ export default function Login() {
       <form onSubmit={onSubmit} className={styles.formContainer}>
         {/* Phone Number */}
         <div className={styles.bookInput}>
-          <label htmlFor="phoneNumber">Phone Number</label>
+          <label htmlFor="phonenumber">Phone Number</label>
           <div className={styles.phoneInput}>
             <PhoneInput
-              value={formData.phoneNumber}
+              value={formData.phonenumber}
               onChange={handlePhoneChange}
               defaultCountry="US"
               international
@@ -91,6 +89,7 @@ export default function Login() {
             id="email"
             placeholder="eg: jolie@email.com"
             onChange={handleChange}
+            value={formData.email}
             required
           />
         </div>
@@ -103,6 +102,7 @@ export default function Login() {
             id="date"
             placeholder="date"
             onChange={handleChange}
+            value={formData.date}
             required
           />
         </div>
