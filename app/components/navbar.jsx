@@ -115,9 +115,9 @@ export default function Navbar() {
 
         {/* Home Link */}
         <Link
-          href="/page/home"
+         href="/"
           className={`${styles.links} ${
-            pathname === "/page/home" ? styles.activeLink : ""
+          pathname === "/" || pathname === "/page/home"
           }`}
         >
           Home
