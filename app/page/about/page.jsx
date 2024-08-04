@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import Care from "@/app/components/care";
+import Video from "@/app/components/video";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "@/app/style/about.module.css";
 import SpinnerIcon from "@/public/icons/spinner.svg";
 import { ClockIcon } from "@heroicons/react/24/outline";
-import BackroundImg from "@/public/icons/background.svg";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,10 +33,7 @@ export default function About() {
     <>
       <div className={styles.aboutMain}>
         <div className={styles.sideVideo}>
-          <video controls muted className={styles.video} preload="none">
-            <source src="/videos/VID-20240727-WA0005.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <Video Height="1000" Width="600" Src="htipoodjc1sc3ynlndyj" />
         </div>
         <div className={styles.aboutContent}>
           <div className={styles.aboutInfo}>
@@ -71,11 +68,8 @@ export default function About() {
             alt="spinner icon"
             priority
           />
-          <div className={styles.bottomImage}>
-            <video controls className={styles.video} preload="none">
-              <source src="/videos/VID-20240727-WA0008.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div className={styles.bottomVideo}>
+          <Video  Height="200" Width="500" Src="ggzyt3fdh2elhvchg5j6" />
           </div>
         </div>
       </div>

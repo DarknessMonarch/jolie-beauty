@@ -36,8 +36,8 @@ export default function Navbar() {
           className={styles.menuIcon}
           alt="back icon"
           onClick={toggleSideBar}
-          width={50}
-          height={50}
+          width={40}
+          height={40}
         />
         <div className={styles.navLinks}>
           {/* Home Link */}

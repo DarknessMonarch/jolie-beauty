@@ -1,51 +1,15 @@
 @media screen {
-    .portfolioMain {
-        gap: 10px;
-        display: grid;
-        padding: 20px;
-        padding-top: 100px;
-        background-color: var(--tertiary-color);
-      }
-      
-      .videoPlayer {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-    
+  .gallery {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 20px;
+    background-color: var(--tertiary-color);
+  }
 }
 
 /* using it as global style for larger devices  */
 @media only screen and (min-width: 48em) {
-    .portfolioMain {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-          "video1 video2 video3 video4"
-          "video1 video5 video5 video5";
-      }
-    
-      .videoPlayer:nth-child(1) {
-        grid-area: video1;
-      }
-    
-      .videoPlayer:nth-child(2) {
-        grid-area: video2;
-      }
-    
-      .videoPlayer:nth-child(3) {
-        grid-area: video3;
-      }
-    
-      .videoPlayer:nth-child(4) {
-        grid-area: video4;
-      }
-    
-      .videoPlayer:nth-child(5) {
-        grid-area: video5;
-      }
-    
 }
 
 /* ipad pro screens & laptop */

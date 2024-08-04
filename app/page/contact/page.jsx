@@ -15,6 +15,7 @@ import styles from "@/app/style/contact.module.css";
 export default function HomePage() {
   const pathname = usePathname();
 
+
   const goInstagram = () => {
     window.open("https://www.instagram.com/joliesbeautyhavend/", "_blank");
   };
@@ -52,8 +53,8 @@ export default function HomePage() {
           <Image
             src={Logo}
             alt="logo"
-            width={140}
-            height={140}
+            width={100}
+            height={100}
             className={styles.logo}
           />
             <p>your beauty, your choice</p>

@@ -16,7 +16,7 @@ export default function Login() {
     email: "",
   });
 
-  const SERVER_API = process.env.NEXT_PUBLIC_SERVER_API;
+  const SERVER_API = process.env.SERVER_API;
 
   async function onSubmit(e) {
     e.preventDefault();
